@@ -44,12 +44,6 @@ body {
   padding: 0;
 }
 
-body {
-  opacity: 0;
-  transition: opacity 500ms ease-out;
-  visibility: hidden;
-}
-
 .app {
   position: relative;
   top: -38px;
@@ -82,4 +76,5 @@ body {
 }
 
 .floatRight {
-float: right;}
+  float: right;
+}
