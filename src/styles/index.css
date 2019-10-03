@@ -48,6 +48,7 @@ body {
   opacity: 0;
   transition: opacity 500ms ease-out;
   visibility: hidden;
+  font-size: 16px;
 }
 
 .app {
