@@ -1,8 +1,13 @@
-const gulp = require('gulp');
-const pagebuilder = require('gulp-pagebuilder');
+const { task, src, dest } = require('gulp');
+const fileinclude = require('gulp-file-include');
+var rename = require("gulp-rename");
 
-gulp.task('default', function () {
-  return gulp.src('index.html')
-    .pipe(pagebuilder('src/components'))
-    .pipe(gulp.dest('dist/'));
+task('default', async function () {
+  return src('./src/app.html')
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: './src/components/'
+    }))
+    .pipe(rename('index.html'))
+    .pipe(dest('./'));
 });
