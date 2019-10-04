@@ -18,8 +18,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run build:html",
-      "pre-push": "npm run build:html"
+      "pre-commit": "npm run build:html && git add *",
+      "pre-push": "npm run build:html && git add *"
     }
   },
   "keywords": []
