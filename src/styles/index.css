@@ -24,12 +24,20 @@
 }
 
 /* Opened page */
-.page#page-1,
+.page#page-1 {
+  height: auto;
+  opacity: 1;
+  overflow: visible;
+  visibility: visible;
+  z-index: 1;
+}
+
 .page:target {
   height: auto;
   opacity: 1;
   overflow: visible;
   visibility: visible;
+  z-index: 2;
 }
 
 .page#page-1 > *,
@@ -82,5 +90,10 @@ body {
   z-index: 2;
 }
 
+.navigation > .link {
+  padding-right: 20px;
+}
+
 .floatRight {
-float: right;}
+  float: right;
+}
